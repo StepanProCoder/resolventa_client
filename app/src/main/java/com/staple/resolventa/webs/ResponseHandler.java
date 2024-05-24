@@ -37,6 +37,8 @@ public class ResponseHandler implements Callback<Solution> {
                 ProSolTyper.check_prosol_type(context, result);
                 String file_path = FileToCache.save(context, result.solution_content, context.getString(R.string.pdf_path));
                 controller.setPdf_path(file_path);
+                controller.show_result(PdfToBitmap.render(new File(file_path), 0));
+                controller.set_sharing(true);
             } catch (IOException | ErrorProSolTypeException e) {
                 controller.display_exception(e);
             }

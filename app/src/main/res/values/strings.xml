@@ -3,7 +3,7 @@
     <string name="base_url">http://10.0.2.2:8080/process/</string>
     <string name="nst">natural_sequent_type</string>
     <string name="errt">error_type</string>
-    <string name="test_seq">[(p->q)&amp;(p->r)] |- [p->(q&amp;r)]</string>
+    <string name="test_seq">[(p->q)&amp;/(p->r)] |- [p->(q&amp;r)]</string>
     <string name="temp_img">temp_image.png</string>
     <string name="pdf_path">result.pdf</string>
     <string name="seq_format">Format: [p] |- [p]</string>

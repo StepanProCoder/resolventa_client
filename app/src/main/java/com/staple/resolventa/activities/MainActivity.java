@@ -36,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
         edit_text = findViewById(R.id.editText);
         main_layout = findViewById(R.id.main_layout);
         submit_btn.setOnClickListener(v -> controller.on_click_submit());
+        share_btn.setOnClickListener(v -> controller.share_pdf());
+        img.setOnTouchListener((arg0, event) -> controller.on_touch(event));
+        controller.restore_state(savedInstanceState);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        controller.save_state(outState);
     }
 
 }
